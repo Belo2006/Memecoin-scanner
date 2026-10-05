@@ -104,7 +104,7 @@ def send(msg):
         json={"chat_id": chat, "text": msg, "disable_web_page_preview": True},
         timeout=15,
     )
-    print("Telegram:", r.status_code)
+    print("Telegram:", r.status_code, r.text[:150])
 
 
 def main():
