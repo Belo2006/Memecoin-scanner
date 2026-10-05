@@ -108,6 +108,7 @@ def send(msg):
 
 
 def main():
+    send("Test: Bot funktioniert")
     seen = load_seen()
     addrs = latest_token_addresses()
     for p in pairs_for(addrs):
