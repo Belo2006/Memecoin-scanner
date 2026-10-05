@@ -14,14 +14,14 @@ import requests
 CHAIN = "solana"
 
 # ---- Filter (nach Geschmack anpassen) ----
-MIN_LIQUIDITY_USD = 1_000
-MIN_VOLUME_1H_USD = 1_000
-MIN_MARKET_CAP_USD = 5_000
+MIN_LIQUIDITY_USD = 15_000
+MIN_VOLUME_1H_USD = 20_000
+MIN_MARKET_CAP_USD = 50_000
 MAX_MARKET_CAP_USD = 2_000_000
 MIN_AGE_MIN = 10
 MAX_AGE_MIN = 6 * 60
-MIN_BUY_RATIO = 0.3
-MIN_TXNS_1H = 10
+MIN_BUY_RATIO = 0.55
+MIN_TXNS_1H = 150
 
 API = "https://api.dexscreener.com"
 STATE_FILE = "seen.json"
@@ -108,7 +108,6 @@ def send(msg):
 
 
 def main():
-    send("Test: Bot funktioniert")
     seen = load_seen()
     addrs = latest_token_addresses()
     for p in pairs_for(addrs):
